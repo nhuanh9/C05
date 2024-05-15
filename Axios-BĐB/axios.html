@@ -21,8 +21,8 @@
         </div>
     </div>
     <script>
+        let abc = []; 
         axios.get('https://restcountries.com/v3.1/all?fields=name,area,population,flags').then(res => {
-            let list = res.data;
             let str = ``;
             let maxArea = list[0];
             let maxPopulation = list[0];
@@ -39,7 +39,11 @@
             document.getElementById('list').innerHTML = str;
             document.getElementById('maxArea').innerHTML = maxArea.name.common + ", " + maxArea.area;
             document.getElementById('maxPopulation').innerHTML = maxPopulation.name.common + ", " + maxPopulation.population;
+            abc = res;
         })
+        //1. axios là bất đồng bộ
+        //2. tất cả thao tác muốn sử dụng dữ liệu từ API đều cần xử lý trong zen
+        //3. ajax là phiên bản thấp của axios 
         function search() {
             let key = document.getElementById('s').value;
             console.log(key);
