@@ -60,6 +60,3 @@ class CComponent extends Component {
 }
 
 export default CComponent;
-// Dung bien binh thuong thi co thay doi gia tri nhung giao dien k doi
-// State la 1 doi tuong, luu cac bien dung trong component
-// Cap nhat state thi giao dien cap nhat
