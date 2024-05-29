@@ -1,13 +1,11 @@
 import "./App.css";
-import CComponent from "./CComponent";
-import Demo from "./Demo";
-import Product from "./Product";
-import Student from "./Student";
+import Country from "./pages/Country";
+import FCompoent from "./pages/FComponent";
 
 function App() {
   return (
     <>
-    <Product></Product>
+    <Country></Country>
     </>
   );
 }
