@@ -16,7 +16,10 @@ function App() {
       <Link to='f'>FCompoent</Link> | 
       <hr/>
       <Routes>
-        <Route path="students" element={<Student />}></Route>
+        <Route path="students" element={<Student />}>
+          <Route path="add" element={<AddStudent />}></Route>
+          <Route path="f" element={<FCompoent />}></Route>
+        </Route>
         <Route path="add-students" element={<AddStudent />}></Route>
         <Route path="countries" element={<Country />}></Route>
         <Route path="f/:id" element={<FCompoent />}></Route>

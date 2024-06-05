@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export default function Student() {
     let [list, setList] = useState([]);
@@ -42,7 +42,7 @@ export default function Student() {
                 setListShow(searchList)
                 setKey({ from: 0, to: 0 })
             }}>Search</button>
-
+            <Outlet></Outlet>
             {listShow.map(e => (
                 <h2>{e.name}, {e.score} <button onClick={() => {
                     if (window.confirm('Ban co chac k?')) {
