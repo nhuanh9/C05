@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react"
 import axios from 'axios';
+import { useParams } from "react-router-dom";
 export default function FCompoent() {
+    let {id} = useParams();
+    console.log(id);
     let [x, setX] = useState(1);
     let [list, setList] = useState([])
     let [data, setData] = useState({

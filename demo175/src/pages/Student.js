@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 
 export default function Student() {
     let [list, setList] = useState([]);
@@ -23,7 +24,7 @@ export default function Student() {
     }, [])
     return (
         <>
-            List Student
+            List Student <button><Link to={'/'}>Logout</Link></button>
             <input onChange={(e) => {
                 let searchList = list;
                 searchList = list.filter(item => item.name.toLowerCase().includes(e.target.value.toLowerCase()));
@@ -51,19 +52,7 @@ export default function Student() {
                     }
                 }}>Xoa</button></h2>
             ))}
-            <hr />
-            <input value={data.name} type="text" name='name' onChange={e => {
-                changeInput(e);
-            }} />
-            <input value={data.score} type="text" name='score' onChange={e => {
-                changeInput(e);
-            }} />
-            <button onClick={() => {
-                axios.post('http://localhost:3000/students', data).then(() => {
-                    getLst();
-                    setData({ name: '', score: '' })
-                })
-            }}>Add</button>
+
         </>
     )
 }
