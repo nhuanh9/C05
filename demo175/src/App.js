@@ -5,6 +5,7 @@ import FCompoent from "./pages/FComponent";
 import Login from "./pages/Login";
 import Student from "./pages/Student";
 import { Link, Route, Routes } from 'react-router-dom'
+import DetailStudent from "./pages/DetailStudent";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         </Route>
         <Route path="add-students" element={<AddStudent />}></Route>
         <Route path="countries" element={<Country />}></Route>
+        <Route path="detail-student" element={<DetailStudent />}></Route>
         <Route path="f/:id" element={<FCompoent />}></Route>
         <Route path="" element={<Login />}></Route>
       </Routes>
