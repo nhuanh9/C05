@@ -6,6 +6,9 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import ListProuct from "./pages/home/ListProduct";
 import ListOrder from "./pages/home/ListOrder";
+import Student from "./pages/admin/student/Student";
+import AddStudent from "./pages/admin/student/AddStudent";
+import DetailStudent from "./pages/admin/student/DetailStudent";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
           <Route path="admin" element={<Admin />}>
             <Route path="" element={<ListProuct />}></Route>
             <Route path="order" element={<ListOrder />}></Route>
+            <Route path="student" element={<Student />}></Route>
+            <Route path="student/add" element={<AddStudent />}></Route>
+            <Route path="student/detail" element={<DetailStudent />}></Route>
           </Route>
         </Routes>
       </div>

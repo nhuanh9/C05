@@ -6,11 +6,15 @@ export default function AdminSideBar() {
         Admin Side Bar
         <br />
         <Link className="nav-link" to={""}>
-          List Product
+          Manage Product
         </Link>
         <br />
         <Link className="nav-link" to={"order"}>
-          List Order
+          Manage Order
+        </Link>
+        <br />
+        <Link className="nav-link" to={"student"}>
+          Manage Student
         </Link>
       </div>
     </>
