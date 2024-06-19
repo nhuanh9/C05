@@ -84,6 +84,13 @@ export default function Student() {
           >
             Chi tiet
           </button>
+          <button
+            onClick={() => {
+              navigate("/admin/student/edit/"+e.id);
+            }}
+          >
+            Sửa
+          </button>
         </h2>
       ))}
     </>

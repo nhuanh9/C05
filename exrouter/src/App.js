@@ -9,6 +9,7 @@ import ListOrder from "./pages/home/ListOrder";
 import Student from "./pages/admin/student/Student";
 import AddStudent from "./pages/admin/student/AddStudent";
 import DetailStudent from "./pages/admin/student/DetailStudent";
+import EditStudent from "./pages/admin/student/EditStudent";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="student" element={<Student />}></Route>
             <Route path="student/add" element={<AddStudent />}></Route>
             <Route path="student/detail" element={<DetailStudent />}></Route>
+            <Route path="student/edit/:id" element={<EditStudent />}></Route>
           </Route>
         </Routes>
       </div>

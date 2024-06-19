@@ -1,7 +1,7 @@
-export default function Left(){
+export default function DetailCart(){
     return (
         <>
-            <div className="col-2">Left</div>
+            <div className="col-7">DetailCart</div>
         </>
     )
 }

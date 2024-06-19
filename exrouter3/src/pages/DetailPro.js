@@ -1,7 +1,7 @@
-export default function DetailCart(){
+export default function DetailPro(){
     return (
         <>
-            <div className="col-7">DetailCart</div>
+            <div className="col-7">DetailPro</div>
         </>
     )
 }
