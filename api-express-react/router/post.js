@@ -7,35 +7,60 @@ const posts = [
         title: 'Bài viết số 1',
         content: 'Nội dung bài viết số 1',
         image: 'https://res.klook.com/image/upload/Mobile/City/swox6wjsl5ndvkv5jvum.jpg',
-        time: new Date().toISOString()
+        time: new Date().toISOString(),
+        user: {
+            id: 1,
+            username: 1,
+            name: 1
+        }
     },
     {
         id: Date.now() + 1,
         title: 'Bài viết số 2',
         content: 'Nội dung bài viết số 2',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/1200px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg',
-        time: new Date().toISOString()
+        time: new Date().toISOString(),
+        user: {
+            id: 1,
+            username: 1,
+            name: 1
+        }
     },
     {
         id: Date.now() + 2,
         title: 'Bài viết số 3',
         content: 'Nội dung bài viết số 3',
         image: 'https://image.sggp.org.vn/w1000/Uploaded/2024/dudbexqdre/2023_05_27/8c-2701.jpg.webp',
-        time: new Date().toISOString()
+        time: new Date().toISOString(),
+        user: {
+            id: 2,
+            username: 2,
+            name: 2
+        }
     },
     {
         id: Date.now() + 3,
         title: 'Bài viết số 4',
         content: 'Nội dung bài viết số 4',
         image: 'https://static01.nyt.com/images/2023/07/01/travel/22hours-paris-tjzf/22hours-paris-tjzf-superJumbo.jpg',
-        time: new Date().toISOString()
+        time: new Date().toISOString(),
+        user: {
+            id: 2,
+            username: 2,
+            name: 2
+        }
     },
     {
         id: Date.now() + 4,
         title: 'Bài viết số 5',
         content: 'Nội dung bài viết số 5',
         image: 'https://canthologistics.com/wp-content/uploads/2021/01/gui-hang-di-Paris.jpg',
-        time: new Date().toISOString()
+        time: new Date().toISOString(),
+        user: {
+            id: 1,
+            username: 1,
+            name: 1
+        }
     }
 ];
 
@@ -59,7 +84,8 @@ router.post("/", (req, res) => {
         title: req.body.title,
         content: req.body.content,
         image: req.body.image,
-        time: new Date().toISOString()
+        time: new Date().toISOString(),
+        user: req.body.user
     };
     posts.push(newPost);
     res.status(201).send(newPost);
