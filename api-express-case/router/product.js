@@ -4,24 +4,27 @@ const router = express.Router();
 const products = [
     {
         id: 1,
-        name: 'Giày Nike',
+        name: 'Product 1',
         price: 100,
         quantity: 10,
-        category:  { id: 1, name: 'Thể thao' }
+        category: { id: 1, name: 'Electronics' },
+        images: ['img1.jpg', 'img2.jpg', 'img3.jpg']
     },
     {
         id: 2,
-        name: 'Ip 12',
+        name: 'Product 2',
         price: 200,
         quantity: 20,
-        category: { id: 2, name: 'Công nghệ' }
+        category: { id: 2, name: 'Books' },
+        images: ['img4.jpg', 'img5.jpg', 'img6.jpg']
     },
     {
         id: 3,
-        name: 'SS Note 10',
+        name: 'Product 3',
         price: 300,
         quantity: 30,
-        category: { id: 2, name: 'Công nghệ' }
+        category: { id: 3, name: 'Clothing' },
+        images: ['img7.jpg', 'img8.jpg', 'img9.jpg']
     }
 ];
 
@@ -41,11 +44,12 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
     const newProduct = {
-        id: Date.now(),
+        id: Date.now(), // Sử dụng timestamp để tạo id duy nhất
         name: req.body.name,
         price: req.body.price,
         quantity: req.body.quantity,
-        category: req.body.category,
+        category: req.body.category, // Nhận category là một đối tượng
+        images: req.body.images
     };
     products.push(newProduct);
     res.status(201).send(newProduct);
@@ -58,7 +62,8 @@ router.put("/:id", (req, res) => {
         products[index].name = req.body.name;
         products[index].price = req.body.price;
         products[index].quantity = req.body.quantity;
-        products[index].category = req.body.category;
+        products[index].category = req.body.category; // Cập nhật category là một đối tượng
+        products[index].images = req.body.images;
         res.send(products[index]);
     } else {
         res.status(404).send({ message: 'Product not found' });
