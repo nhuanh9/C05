@@ -28,8 +28,6 @@ import {
 import 'ckeditor5/ckeditor5.css';
 import {useContext} from "react";
 import {MyContext} from "./MyContext";
-import A from "./components/A";
-import B from "./components/B";
 
 function App() {
     const handleEditorDataChange = (event, editor) => {
@@ -39,11 +37,6 @@ function App() {
     const ct = useContext(MyContext);
     return (
         <>
-            {ct[0].name}
-            <hr/>
-            <A></A>
-            <hr/>
-            <B></B>
             <Routes>
                 <Route path='' element={<Login></Login>}></Route>
                 <Route path='register' element={<Register></Register>}></Route>

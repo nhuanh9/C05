@@ -4,5 +4,6 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/CASE-STUDY-MD2-22-6" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/TeachReactAll" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/redux-async-thunk-example" vcs="Git" />
   </component>
 </project>
