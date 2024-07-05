@@ -18,7 +18,7 @@ export default function ListProduct() {
     }, [])
     useEffect(()=> {
         axios.get('http://localhost:3000/products').then(x => {
-            if(selected === 0) {
+            if(selected == 0) {
                 setList(x.data)
             } else {
                 setList(x.data.filter(e => e.category.id == selected))
@@ -32,8 +32,10 @@ export default function ListProduct() {
                 <h2>{e.name}, {e.price}, {e.quantity}, {e.category.name}</h2>
             ))}
             <select onChange={(e)=>{
+                console.log(e.target.value);
                 setSelected(e.target.value)
             }}>
+                <option value={0}>Tat ca</option>
                 {cates.map(e => (<option value={e.id}>{e.name}</option>))}
             </select>
         </>
